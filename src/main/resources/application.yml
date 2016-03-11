@@ -1,0 +1,29 @@
+server:
+  port: ${PORT:7980}
+---
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka:8761/eureka/
+---
+spring:
+  profiles: cloud
+server:
+  port: ${PORT}
+eureka:
+  instance:
+    hostname: ${vcap.application.uris[0]}
+    nonSecurePort: 80
+    nonSecurePortEnabled: false
+    securePortEnabled: true
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.registry.credentials.url}
+    healthcheck:
+      enabled: true
