@@ -2,18 +2,18 @@ language: java
 jdk:
 - oraclejdk8
 sudo: false
-#deploy:
-#  edge: true
-#  provider: cloudfoundry
-#  api: https://api.run.pivotal.io
-#  username: andreas.evers@ordina.be
-#  password:
-#    secure: LpNwHO6CRsKn3VB4/gemzzjy9jy2aVW+jXNaZ5+8KnqwJa0oe8I9wYMC99nAQJQuwVJQUcIDF3efhzWNN1lJKS+GMqTHI2wBorv7CMHlAtkfHUDvrTeCu3vr1B9msKHmGRrJhKci2yhHR4mtymVn3VAaixR9BtJ+8YYjUbEsCkgpz+Ra9nMnh3c9CkvxJ1qr7vaQiayCQrMY3u2PRDFtCRkZhfKU9PoAq2BicF2G3XBhBk8NwPQ9uIT0VTT7WqnmM/yk3axr6V1RBk5Hqb8KI2ghbGMgGm4rV1bzPN+TEbIf5N4WSj3/tuQ4A3EmvbWBoeBzHPEqUdhup9HaqtJNxOtpRAVGc2rkNUM6OPrwgtMt3m845+lVYWO9rzQT/hxDghjur/ehu/cyGFVRW20s4U67vXL69CgovA9DIl3W7RoO/cTsjGuwW4Mrdol68kMIo9s+A3lpEkpmL4RWGPs9bBESprOwGCCu2Bd1KXA+I8CsmT7TjRcqZFJuE232gM6DpQZ2nwdakZhCGYj0JM5BU8hgLRIR+hFDfDO5YdT2QtCID8iG/TnGxSo0ThKMi7U6EvZmyd5Np/iaxCf5v0KVXxfXsZHDNpbu1Q9TC7PaLOHJPkKETcdfeM7AqaYtb7CSsJX2NlU3Hj7SBzIlsU7Zp72gV/HgHmljsMDTSrSu2KE=
-#  organization: OrdinaBelgiumNV
-#  space: development
-#  on:
-#    repo: Ordineo/hystrix
-#    branch: master
+deploy:
+  edge: true
+  provider: cloudfoundry
+  api: https://api.run.pivotal.io
+  username: gina.debeukelaer@ordina.be
+  password:
+    secure: KW97aX6kCcawKmc+Vkj8SBJqf7iADdFg1buGQ1dKwoxmhmYeYO0N9vOp13WdQCyl6P0HwWqul1hFBzgnlL5uk68SF4A/n2+tiaph+a173l2hxgpLCy3NqrYMWNtxP64xrp0H1pFpuaZViQoFrb6kS+UZ3wqdrmFeqxKBxnkYV8hqorVFbPoWKCNMCzUGnLKEzo1/GMrxZZswFIt0iUMXr1HfyHDgIDn2oXe7pEP2Q55xMOg8ab41A4WRiv7JxiGi2OGFc60gnxDfhXo+LzJSKcnZAoOTmPoso5G1LcFn1jbY4LT5+Dcvo0E/nZ4ApU/i+/3rYWAJfTI+P4t+ucZw5rQ1QO5p0iIqsPm13+13+VSk8bxIBEdfAfrFSPcy8IWKCT8EdfTPkPUIn8lVcvWz/kMfpra/AWIUbjvzK3J3Q1jG19/sLnuvlYmkqwAPlc1h8CC2otGHjq3ChqxbA1xCuQQQyHePjDApAFTWNAvN3Add3g+n39o+x7nhQ/gUt+XT7tViaLfmX8YgDFsfEk23Q6kMK5dPcXHa0aVXnGtDTWG3hGYIvqrpPW7fKNWomn7GumTJNFgJ41doxiW2ewlNmyOvjaeqLJrNE8dEjPUUsciVufWwDvON117xRq3JmY+v2Was8zpugXEHN/JF6e0dP9ISOPPgJ+ecUuxpeGjF1Eg=
+  organization: OrdinaBelgiumNV
+  space: development
+  on:
+    repo: Ordineo/hystrix
+    branch: master
 notifications:
   slack:
     secure: HmbHtQN2CuGG9aa8W1iiZcSONAHUbVmDEWNs6aII9uhEBaQ9gW23Pck2XouX/pR+07IhQDzzRIK9HJ3PUaORy6To/KoqhmdgtyYgEA0e4pdHjKA+6vPCio+21iLtMm28fpsKp6ERROcUDd+HtevIq4cVmk1pcMaWo6JvSLVDUxRqpAZj1l9l4nV3vK2kcZpeoUlNeYSdSyhu/cDeZVEf2BMFV4SM1yYrYbvb3RnNq1bhK8hQO4Dv35xWK9Csb+DEXM60W+dZW8yYDvJAZLOBbFAV8gOwCMmSH7bsLKiY+sluVAON+vTUZ/1z9iP8Al9IM7DcosArid+I92xGOZVwRv2K5mxCfK7PamXRNzQC0DEaNisc2jWE7MUtgqxo4EqRKGmkgu8t9y+BttOO59HoSPAXE7jYGPtdqHZeyYbYI9f55ExS68UPiT6NiKEpf4y2E0cmgWJYAp0+2tuJ2LZ4Ahawe2jFKNuyZJE45IWe17Ztd59GN42YbYk1FKtLJjMJF3H5qaYaYsVpa/g1DSRvByYRyR3zPnXFkdhfUlpvL7wfYSkodqCbsbdiKo7HvRsHCwr8USHUdgCARTMevwENu2H7JQhJadlZAIqPOxRTeE8uyrC5BMwPoRJ1CQoZMsVUpltUciO2rxZGuXbzhMKil/0b5XbzUzbpHLuOXaS7IYA=
