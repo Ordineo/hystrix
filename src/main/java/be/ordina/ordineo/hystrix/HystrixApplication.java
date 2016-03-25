@@ -24,9 +24,4 @@ public class HystrixApplication {
         new SpringApplicationBuilder(HystrixApplication.class).web(true).run(args);
     }
 
-    @Bean
-    public ServletRegistrationBean mockStreamServlet() {
-        return new ServletRegistrationBean(new MockStreamServlet(), "/mock.stream");
-    }
-
 }
